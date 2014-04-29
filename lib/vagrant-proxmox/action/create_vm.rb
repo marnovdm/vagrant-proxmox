@@ -24,7 +24,7 @@ module VagrantPlugins
 							params = {vmid: vm_id,
 							          ostemplate: config.os_template,
 							          hostname: env[:machine].config.vm.hostname || env[:machine].name.to_s,
-							          password: 'vagrant',
+							          password: config.vm.vm_password.to_s || 'vagrant',
 							          memory: config.vm_memory,
 							          description: "#{config.vm_name_prefix}#{env[:machine].name}"}
 							get_machine_ip_address(env).try { |ip_address| params[:ip_address] = ip_address }
