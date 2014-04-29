@@ -36,6 +36,11 @@ module VagrantPlugins
 			#
 			# @return [Integer]
 			attr_accessor :vm_memory
+			
+			# Password for the virtual machine root account
+			#
+			# @return [String]
+			attr_accessor :vm_password
 
 			# The maximum timeout for a proxmox server task (in seconds)
 			#
